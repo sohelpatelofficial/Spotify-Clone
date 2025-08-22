@@ -1,0 +1,37 @@
+{
+    "p1": {
+        "folder" : "mood-songs",
+        "title": "Mood Songs.",
+        "description": "Songs For Your Mood.",
+        "path": "/songs/playlist-thumb/mood_songs.jpg"
+    },
+
+    "p2" : {
+        "folder": "english-songs",
+        "title": "Top 10 Internationl.",
+        "description": "Listen Top 10 famous Internationl Songs.",
+        "path": "/songs/playlist-thumb/eng.jpg"
+    },
+
+    "p3" : {
+        "folder": "arijit-hits",
+        "title": "Best Of Arijit Singh.",
+        "description": "Listen Best Of Arijit Singh Songs.",
+        "path": "/songs/playlist-thumb/arijit.jpg"
+    },
+
+    "p4" : {
+        "folder": "udit-narayan",
+        "title": "Best Of Udit Naryan.",
+        "description": "Listen Famous Hits Of Udit Narayan.",
+        "path": "/songs/playlist-thumb/udhits.png"
+    },
+
+    "p5" : {
+        "folder": "kumar-sanu",
+        "title": "Best Of Kumar Sanu.",
+        "description": "Listen Famous Hits Of Kumar Sanu.",
+        "path": "/songs/playlist-thumb/kumarsanuth.jfif"
+    }
+
+}

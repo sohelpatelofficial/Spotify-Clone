@@ -1,0 +1,30 @@
+{
+    "p1": {
+        "folder" : "trending",
+        "title": "Top 50 Trending India.",
+        "description": "Listen Top Most Played Songs in India.",
+        "path": "/songs/playlist-thumb/trending.png"
+    },
+
+    "p2": {
+        "folder" : "2010",
+        "title": "2010 - 2015 Bollywood Hits.",
+        "description": "Listen Unmatched 2010 -2015 Bollywood Movies Hit Songs.",
+        "path": "/songs/playlist-thumb/2010s.png"
+    },
+
+    "p3" : {
+        "folder": "2000",
+        "title": "2000's Bollywood Hits.",
+        "description": "Listen Unmatched 2000's Bollywood Movies Hit Songs.",
+        "path": "/songs/playlist-thumb/b2000s.png"
+    },
+
+    "p4" : {
+        "folder": "1990",
+        "title": "90's Era.",
+        "description": "Listen Legendary Singers Hits from the 90's Era.",
+        "path": "/songs/playlist-thumb/90era.jpg"
+    }
+
+}
