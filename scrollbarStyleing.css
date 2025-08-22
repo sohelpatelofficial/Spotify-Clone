@@ -1,0 +1,30 @@
+/* Custom Scrollbar for card container */
+
+.playlistContainer {
+
+    /* nested css */
+
+    & .cardContainer::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    & .cardContainer::-webkit-scrollbar-thumb {
+        background-color: #4CAF50;
+        /* Green color for the scrollbar thumb */
+        border-radius: 10px;
+        border: 3px solid #111;
+        /* Dark border color */
+    }
+
+    & .cardContainer::-webkit-scrollbar-track {
+        background-color: #333;
+        /* Dark color for the scrollbar track */
+        border-radius: 10px;
+    }
+
+    & .cardContainer::-webkit-scrollbar-thumb:hover {
+        background-color: #45a049;
+        /* Darker green color on hover */
+
+    }
+}

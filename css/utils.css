@@ -1,0 +1,15 @@
+.dFlex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.border {
+    border: 2px solid red;
+}

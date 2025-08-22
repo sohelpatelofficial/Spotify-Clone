@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player And Music</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utils.css">
+</head>
+
+<body>
+    <main class="container dFlex">
+        <section class="left">
+            <img src="svgs/cancel.svg" alt="close button" id="closeMenuBtn" class="menuButton">
+            <div class="spotify">
+                <ul>
+                    <li><img src="svgs/spotifylogo.svg" alt="spotify logo" width="90px"></li>
+                    <li><img src="svgs/home.svg" alt="home logo"><span>Home</span></li>
+                    <li><img src="svgs/search.svg" alt="search logo"><span style="color: #b3b3b3;">Search</span></li>
+                </ul>
+            </div>
+            <div class="library dFlex">
+                <div class="left-sidebar-header dFlex" style="margin-top: 5px;">
+                    <li><img src="svgs/library.svg" alt="library logo"><span>Library</span></li>
+                    <li><img src="svgs/plus.svg" alt="plus logo" style="width: 15px;"></li>
+                </div>
+                <ul class="Playlist"></ul>
+                <div class="podcast">
+                    <p>Let's find some podcasts to follow</p>
+                    <p>We'll keep you updated on new episodes</p>
+                    <button>Browse Podcasts</button>
+                </div>
+            </div>
+            <div class="left-sidebar-footer">
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+                    <a href="https://www.spotify.com/in-en/privacy/">Privacy Center</a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                    <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+                    <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">Cookies</a>
+                </div>
+                <!-- <div class="lang">
+                    <button>
+                        <img src="svgs/panetlang.svg" alt="lang logo" width="18px">
+                        <span>English</span>
+                    </button>
+                </div> -->
+            </div>
+        </section>
+        <section class="right">
+            <header class="dFlex">
+                <img src="svgs/hamburger.svg" alt="menu button" id="menuBtn" class="menuButton inline-block" width="30">
+                <div class="scollBtn">
+                    <img src="svgs/leftArrow.svg" alt="RA" width="30px">
+                    <img src="svgs/rightArrow.svg" alt="LA" width="30px">
+                </div>
+                <div class="logReg">
+                    <a href="#">Sign Up</a>
+                    <a href="#">Login</a>
+                </div>
+            </header>
+            <div class="playlistContainer">
+                <div class="spotifyPlaylists dFlex">
+                    <h1>Spotify Playlists</h1>
+                    <span>Show All</span>
+                </div>
+                <div class="cardContainer dFlex"></div>
+                <div class="cardContainer container2 dFlex"></div>
+            </div>
+            <footer class="footer">
+                <div class="footerDiv dFlex">
+                    <div class="footCol column1">
+                        <h3>Company</h3>
+                        <a href="#">About</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">For The Record</a>
+                    </div>
+                    <div class="footCol column2">
+                        <h3>Communities</h3>
+                        <a href="#">For Artists</a>
+                        <a href="#">Developers</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Investors</a>
+                        <a href="#">Vendors</a>
+                    </div>
+                    <div class="footCol column3">
+                        <h3>Useful Links</h3>
+                        <a href="#">Suport</a>
+                        <a href="#">Free Mobile App</a>
+                    </div>
+                    <div class="footCol column4">
+                        <a href="#"><img src="svgs/social-icons/instagram.svg" alt="instagram logo" width="50px"></a>
+                        <a href="#"><img src="svgs/social-icons/twitter.svg" alt="twitter logo" width="50px"></a>
+                        <a href="#"><img src="svgs/social-icons/facebook.svg" alt="facebook logo" width="50px"></a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+        <div class="music-player dFlex">
+            <div class="dFlex">
+                <div class="track-info dFlex">
+                    <span id="tracKName">Track Name</span>
+                    <span id="trackDuration" style="width: 95px;">00:00 / 00:00</span>
+                </div>
+                <div class="volume dFlex">
+                    <img src="svgs/volume.svg" alt="volume">
+                    <input type="range" name="volume" id="volumeBtn" value="100">
+                </div>
+            </div>
+            <div class="seek-bar">
+                <div class="circle"></div>
+            </div>
+            <div class="controls dFlex">
+                <img src="svgs/musicplayer/previous.svg" alt="Previous logo" id="prevBtn">
+                <img src="svgs/musicplayer/play.svg" alt="Play logo" id="pauseBtn">
+                <img src="svgs/musicplayer/next.svg" alt="Next logo" id="nextBtn">
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
