@@ -32,7 +32,7 @@ let thPaths;
 
     async function fetchSongs(folder) {
         // Fetching songs from server
-        let response = await fetch(`/songs/${folder}/`);
+        let response = await fetch(`/Spotify-Clone/songs//${folder}/`);
         response = await response.text()
         // console.log(response);
         let songsPath = [];
@@ -44,7 +44,7 @@ let thPaths;
         let anchors = html.getElementsByTagName("a");
         Array.from(anchors).forEach(anchor => {
             if (anchor.href.includes(".mp3")) {
-                splitPath = anchor.href.split(`/songs/${folder}/`); // The split path separate the previous and next string before and after the matched argument(string) in two array value the first index value is previous string and the second index value is next string. 
+                splitPath = anchor.href.split(`/Spotify-Clone/songs//${folder}/`); // The split path separate the previous and next string before and after the matched argument(string) in two array value the first index value is previous string and the second index value is next string. 
                 songsPath.push(anchor.href);
                 // The below line will fetch Name of the song from path instead of full path
                 songsName.push(decodeURIComponent(splitPath[1].replaceAll('.mp3', '')))
@@ -131,7 +131,7 @@ let thPaths;
         }
         else {
             currentSong.src = track;
-            Track_Name.innerHTML = track.split(`/songs/${folder}/`)[1].replace(".mp3", "");
+            Track_Name.innerHTML = track.split(`/Spotify-Clone/songs/${folder}/`)[1].replace(".mp3", "");
 
             if (playNext == true) {
                 currentSong.play()
@@ -304,7 +304,7 @@ let thPaths;
             }
         }
 
-        let response2 = await fetch("/songs/playlistContainer2.json");
+        let response2 = await fetch("/Spotify-Clone/songs//playlistContainer2.json");
         response2 = await response2.json();
         for (const card in response2) {
             if (Object.hasOwnProperty.call(response, card)) {
@@ -341,5 +341,6 @@ let thPaths;
             main(folder);
         })
     })
+
 
 })();
