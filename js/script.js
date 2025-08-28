@@ -32,7 +32,7 @@ let thPaths;
 
     async function fetchSongs(folder) {
         // Fetching songs from server
-        let response = await fetch(`/Spotify-Clone/songs//${folder}/`);
+        let response = await fetch(`/Spotify-Clone/songs/${folder}/`);
         response = await response.text()
         // console.log(response);
         let songsPath = [];
@@ -44,7 +44,7 @@ let thPaths;
         let anchors = html.getElementsByTagName("a");
         Array.from(anchors).forEach(anchor => {
             if (anchor.href.includes(".mp3")) {
-                splitPath = anchor.href.split(`/Spotify-Clone/songs//${folder}/`); // The split path separate the previous and next string before and after the matched argument(string) in two array value the first index value is previous string and the second index value is next string. 
+                splitPath = anchor.href.split(`/Spotify-Clone/songs/${folder}/`); // The split path separate the previous and next string before and after the matched argument(string) in two array value the first index value is previous string and the second index value is next string. 
                 songsPath.push(anchor.href);
                 // The below line will fetch Name of the song from path instead of full path
                 songsName.push(decodeURIComponent(splitPath[1].replaceAll('.mp3', '')))
@@ -124,7 +124,7 @@ let thPaths;
     // function for playing tracks
     function playMusic(track, pause = false, playNext = false) {
         if (!pause) {
-            currentSong.src = `/songs/${folder}/` + track + ".mp3/";
+            currentSong.src = `/Spotify-Clone/songs/${folder}/` + track + ".mp3/";
             currentSong.play();
             pauseButton.src = "svgs/musicplayer/pause.svg"
             Track_Name.innerHTML = trackName;
@@ -174,11 +174,11 @@ let thPaths;
     pauseButton.onclick = () => {
         if (currentSong.paused) {
             currentSong.play();
-            pauseButton.src = "svgs/musicplayer/pause.svg";
+            pauseButton.src = "/Spotify-Clone/svgs/musicplayer/pause.svg";
         }
         else {
             currentSong.pause();
-            pauseButton.src = "svgs/musicplayer/play.svg";
+            pauseButton.src = "/Spotify-Clone/svgs/musicplayer/play.svg";
         }
     }
     // Adding listener for previous and next song functionality.
@@ -191,7 +191,7 @@ let thPaths;
             // currentSong.play();
             // prevTrack = decodeURIComponent((prevTrack.split("/songs/")[1]).replaceAll('.mp3', ''));
             prevTrack = decodeURIComponent(prevTrack);
-            pauseButton.src = "svgs/musicplayer/pause.svg"
+            pauseButton.src = "/Spotify-Clone/svgs/musicplayer/pause.svg"
             playMusic(prevTrack, true, true)
             circle.style.left = "-3px";
         }
@@ -207,7 +207,7 @@ let thPaths;
             nextTrack = songsData[1][nextTrackIndex];
             nextTrack = decodeURIComponent(nextTrack);
             playMusic(nextTrack, true, true)
-            pauseButton.src = "svgs/musicplayer/pause.svg"
+            pauseButton.src = "/Spotify-Clone/svgs/musicplayer/pause.svg"
             circle.style.left = "-3px";
         }
 
@@ -237,7 +237,7 @@ let thPaths;
     let volumeImg = document.querySelector(".volume img:first-child");
     volumeImg.onclick = (e) => {
         // console.log(e.target.src == "/svgs/volume.svg");
-        if (e.target.src == "/svgs/volume.svg") {
+        if (e.target.src == "/Spotify-Clone/svgs/volume.svg") {
             e.target.src = "svgs/mute.svg";
             currentSong.muted = true;
             volumeBtn.value = 0;
@@ -281,7 +281,7 @@ let thPaths;
     };
 
     async function createPlaylistCard() {
-        let response = await fetch("/songs/playlistContainer1.json");
+        let response = await fetch("/Spotify-Clone/songs/playlistContainer1.json");
         response = await response.json();
         i = 0;
         for (const card in response) {
@@ -291,7 +291,7 @@ let thPaths;
                 <div class="card" data-folder="${element.folder}">
                     <figure>
                         <img src="${element.path}" alt="th${i}" width="175px">
-                        <button class="playButton"><img src="svgs/playbutton.svg" alt="playButton Logo"
+                        <button class="playButton"><img src="/Spotify-Clone/svgs/playbutton.svg" alt="playButton Logo"
                                 width="50px"></button>
                         <figcaption>
                             <h3>${element.title}</h3>
@@ -313,7 +313,7 @@ let thPaths;
                 <div class="card" data-folder="${element.folder}">
                     <figure>
                         <img src="${element.path}" alt="th${i}" width="175px">
-                        <button class="playButton"><img src="svgs/playbutton.svg" alt="playButton Logo"
+                        <button class="playButton"><img src="/Spotify-Clone/svgs/playbutton.svg" alt="playButton Logo"
                                 width="50px"></button>
                         <figcaption>
                             <h3>${element.title}</h3>
@@ -335,7 +335,7 @@ let thPaths;
     // console.log(Array.isArray(playlistCards));
     playlistCards.forEach(card => {
         card.addEventListener("click", async e => {
-            pauseButton.src = "svgs/musicplayer/play.svg";
+            pauseButton.src = "/Spotify-Clone/svgs/musicplayer/play.svg";
             circle.style.left = "-3px";
             folder = e.currentTarget.dataset.folder;
             main(folder);
@@ -344,3 +344,4 @@ let thPaths;
 
 
 })();
+
